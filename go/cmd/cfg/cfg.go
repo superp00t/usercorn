@@ -3,8 +3,8 @@ package cfg
 import (
 	"fmt"
 
-	"github.com/lunixbochs/usercorn/go/models"
-	"github.com/lunixbochs/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models/cpu"
 )
 
 type Block struct {

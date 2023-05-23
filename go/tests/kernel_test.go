@@ -4,9 +4,9 @@ import (
 	"encoding/binary"
 	"testing"
 
-	"github.com/lunixbochs/usercorn/go"
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/loader"
+	"github.com/superp00t/usercorn/go"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/loader"
 )
 
 type PosixKernel struct {

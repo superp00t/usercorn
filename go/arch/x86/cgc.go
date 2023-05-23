@@ -6,10 +6,10 @@ import (
 	uc "github.com/unicorn-engine/unicorn/bindings/go/unicorn"
 	"syscall"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/models"
-	"github.com/lunixbochs/usercorn/go/models/cpu"
-	"github.com/lunixbochs/usercorn/go/native"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/native"
 )
 
 var cgcSysNum = map[int]string{

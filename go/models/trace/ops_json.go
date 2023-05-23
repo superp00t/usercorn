@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"strconv"
 
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 type msp map[string]interface{}

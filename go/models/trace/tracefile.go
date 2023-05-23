@@ -8,8 +8,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/lunixbochs/usercorn/go/arch"
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/arch"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 var TRACE_MAGIC = "UCIR"

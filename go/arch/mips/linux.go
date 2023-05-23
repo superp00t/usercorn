@@ -5,9 +5,9 @@ import (
 	sysnum "github.com/lunixbochs/ghostrace/ghost/sys/num"
 	uc "github.com/unicorn-engine/unicorn/bindings/go/unicorn"
 
-	"github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/kernel/linux"
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/kernel/linux"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 var LinuxRegs = []int{uc.MIPS_REG_A0, uc.MIPS_REG_A1, uc.MIPS_REG_A2, uc.MIPS_REG_A3, 0, 0}

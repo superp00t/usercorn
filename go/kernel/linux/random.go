@@ -2,7 +2,7 @@ package linux
 
 import (
 	"crypto/rand"
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
+	co "github.com/superp00t/usercorn/go/kernel/common"
 )
 
 func (k *LinuxKernel) Getrandom(buf co.Obuf, size uint64, flags uint32) uint64 {

@@ -1,8 +1,8 @@
 package unpack
 
 import (
-	"github.com/lunixbochs/usercorn/go/models/cpu"
-	"github.com/lunixbochs/usercorn/go/native/enum"
+	"github.com/superp00t/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/native/enum"
 )
 
 var mmapProtMap = map[int]int{

@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/lunixbochs/usercorn/go/lua"
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/lua"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 type Tui struct {

@@ -3,7 +3,7 @@ package cfg
 import (
 	"os"
 
-	"github.com/lunixbochs/usercorn/go/cmd"
+	"github.com/superp00t/usercorn/go/cmd"
 )
 
 func Main(args []string) {

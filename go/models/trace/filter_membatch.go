@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/lunixbochs/usercorn/go/models"
-	"github.com/lunixbochs/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models/cpu"
 )
 
 // OpMemBatch is a collection of reads and writes that occured within a basic block

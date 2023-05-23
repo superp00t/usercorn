@@ -4,7 +4,7 @@ import (
 	"github.com/pkg/errors"
 	uc "github.com/unicorn-engine/unicorn/bindings/go/unicorn"
 
-	"github.com/lunixbochs/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/models/cpu"
 )
 
 type Builder struct {

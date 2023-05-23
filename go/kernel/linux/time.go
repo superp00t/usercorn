@@ -3,8 +3,8 @@ package linux
 import (
 	"time"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/native"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/native"
 )
 
 func (k *LinuxKernel) Gettimeofday(tp co.Obuf, tz *native.Timespec) uint64 {

@@ -13,10 +13,10 @@ import (
 	"strconv"
 	"strings"
 
-	usercorn "github.com/lunixbochs/usercorn/go"
-	"github.com/lunixbochs/usercorn/go/debug"
-	"github.com/lunixbochs/usercorn/go/models"
-	"github.com/lunixbochs/usercorn/go/ui"
+	usercorn "github.com/superp00t/usercorn/go"
+	"github.com/superp00t/usercorn/go/debug"
+	"github.com/superp00t/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/ui"
 )
 
 type strslice []string

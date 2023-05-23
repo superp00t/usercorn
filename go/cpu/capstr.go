@@ -4,7 +4,7 @@ import (
 	cs "github.com/lunixbochs/capstr"
 	"github.com/pkg/errors"
 
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 type Capstr struct {

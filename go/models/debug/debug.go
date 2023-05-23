@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/lunixbochs/usercorn/go/loader"
-	"github.com/lunixbochs/usercorn/go/models"
-	"github.com/lunixbochs/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/loader"
+	"github.com/superp00t/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models/cpu"
 )
 
 type Debug struct {

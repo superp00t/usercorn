@@ -7,11 +7,11 @@ import (
 	"os"
 	"sort"
 
-	"github.com/lunixbochs/usercorn/go/arch"
-	"github.com/lunixbochs/usercorn/go/models"
-	"github.com/lunixbochs/usercorn/go/models/cpu"
-	"github.com/lunixbochs/usercorn/go/models/debug"
-	"github.com/lunixbochs/usercorn/go/models/trace"
+	"github.com/superp00t/usercorn/go/arch"
+	"github.com/superp00t/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/models/debug"
+	"github.com/superp00t/usercorn/go/models/trace"
 )
 
 // TODO: this is duplicated from drcov.go

@@ -5,9 +5,9 @@ import (
 	"encoding/binary"
 	"github.com/pkg/errors"
 
-	"github.com/lunixbochs/usercorn/go/models"
-	"github.com/lunixbochs/usercorn/go/models/cpu"
-	"github.com/lunixbochs/usercorn/go/models/debug"
+	"github.com/superp00t/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/models/debug"
 )
 
 type Replay struct {

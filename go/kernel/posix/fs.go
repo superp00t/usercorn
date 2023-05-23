@@ -3,7 +3,7 @@ package posix
 import (
 	"syscall"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
+	co "github.com/superp00t/usercorn/go/kernel/common"
 )
 
 func (k *PosixKernel) Statfs(path string, statfs co.Obuf) uint64 {

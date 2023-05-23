@@ -1,8 +1,8 @@
 package mach
 
 import (
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/kernel/posix"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/kernel/posix"
 )
 
 func (k *MachKernel) KernelrpcMachVmAllocateTrap(target int, addrOut co.Obuf, size co.Len, flags int) uint64 {

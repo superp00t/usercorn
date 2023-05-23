@@ -3,7 +3,7 @@ package linux
 import (
 	"fmt"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
+	co "github.com/superp00t/usercorn/go/kernel/common"
 )
 
 const (

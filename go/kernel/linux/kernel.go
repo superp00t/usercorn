@@ -1,8 +1,8 @@
 package linux
 
 import (
-	"github.com/lunixbochs/usercorn/go/kernel/posix"
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/kernel/posix"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 const (

@@ -1,7 +1,7 @@
 package lua
 
 import (
-	"github.com/lunixbochs/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/models/cpu"
 
 	"github.com/lunixbochs/luaish"
 )

@@ -3,7 +3,7 @@ package unpack
 import (
 	"syscall"
 
-	"github.com/lunixbochs/usercorn/go/native/enum"
+	"github.com/superp00t/usercorn/go/native/enum"
 )
 
 var fileModeMap = map[int]int{

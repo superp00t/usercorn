@@ -4,8 +4,8 @@ import (
 	"os"
 	"syscall"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/models"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 func (k *PosixKernel) Exit(code int) {

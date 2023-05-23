@@ -5,9 +5,9 @@ import (
 	"os"
 	"syscall"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/models/cpu"
-	"github.com/lunixbochs/usercorn/go/native/enum"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/native/enum"
 )
 
 func (k *PosixKernel) Mmap(addrHint, size uint64, prot enum.MmapProt, flags enum.MmapFlag, fd co.Fd, off co.Off) uint64 {

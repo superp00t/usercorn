@@ -3,7 +3,7 @@ package models
 import (
 	"encoding/binary"
 
-	"github.com/lunixbochs/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/models/cpu"
 )
 
 type Task interface {

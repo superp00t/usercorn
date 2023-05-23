@@ -3,7 +3,7 @@ package unpack
 import (
 	uc "github.com/unicorn-engine/unicorn/bindings/go/unicorn"
 
-	"github.com/lunixbochs/usercorn/go/native/enum"
+	"github.com/superp00t/usercorn/go/native/enum"
 )
 
 var mmapProtMap = map[int]int{

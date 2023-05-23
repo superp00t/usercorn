@@ -3,8 +3,8 @@ package linux
 import (
 	"syscall"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/native"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/native"
 )
 
 func fdcount(bufs ...co.Obuf) int {

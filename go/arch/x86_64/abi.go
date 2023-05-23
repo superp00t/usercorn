@@ -4,7 +4,7 @@ import (
 	"github.com/pkg/errors"
 	uc "github.com/unicorn-engine/unicorn/bindings/go/unicorn"
 
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 var AbiRegs = []int{uc.X86_REG_RDI, uc.X86_REG_RSI, uc.X86_REG_RDX, uc.X86_REG_R10, uc.X86_REG_R8, uc.X86_REG_R9}

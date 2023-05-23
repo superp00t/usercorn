@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 	"os"
 
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 type (

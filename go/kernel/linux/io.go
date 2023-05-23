@@ -8,8 +8,8 @@ import (
 	"path"
 	"syscall"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/kernel/posix"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/kernel/posix"
 )
 
 const UINT64_MAX = 0xFFFFFFFFFFFFFFFF

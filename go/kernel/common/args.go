@@ -1,7 +1,7 @@
 package common
 
 import (
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 func StackArgs(u models.Usercorn) func(n int) ([]uint64, error) {

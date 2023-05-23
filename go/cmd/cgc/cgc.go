@@ -14,11 +14,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/lunixbochs/usercorn/go"
-	"github.com/lunixbochs/usercorn/go/cmd"
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/models"
-	"github.com/lunixbochs/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go"
+	"github.com/superp00t/usercorn/go/cmd"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models/cpu"
 )
 
 var secretPage uint64 = 0x4347c000

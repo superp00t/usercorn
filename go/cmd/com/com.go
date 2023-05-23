@@ -4,10 +4,10 @@ import (
 	"github.com/pkg/errors"
 	"os"
 
-	"github.com/lunixbochs/usercorn/go"
-	"github.com/lunixbochs/usercorn/go/cmd"
-	"github.com/lunixbochs/usercorn/go/loader"
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go"
+	"github.com/superp00t/usercorn/go/cmd"
+	"github.com/superp00t/usercorn/go/loader"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 func Main(args []string) {

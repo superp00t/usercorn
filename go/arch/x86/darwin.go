@@ -4,9 +4,9 @@ import (
 	"github.com/lunixbochs/ghostrace/ghost/sys/num"
 	uc "github.com/unicorn-engine/unicorn/bindings/go/unicorn"
 
-	"github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/kernel/darwin"
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/kernel/darwin"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 const (

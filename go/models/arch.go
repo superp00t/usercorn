@@ -11,7 +11,7 @@ import (
 	"github.com/lunixbochs/fvbommel-util/sortorder"
 	uc "github.com/unicorn-engine/unicorn/bindings/go/unicorn"
 
-	"github.com/lunixbochs/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/models/cpu"
 )
 
 // platform interfaces

@@ -4,10 +4,10 @@ import (
 	"github.com/lunixbochs/argjoy"
 	"syscall"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/kernel/linux/unpack"
-	"github.com/lunixbochs/usercorn/go/native"
-	"github.com/lunixbochs/usercorn/go/native/enum"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/kernel/linux/unpack"
+	"github.com/superp00t/usercorn/go/native"
+	"github.com/superp00t/usercorn/go/native/enum"
 )
 
 func Unpack(k *LinuxKernel, arg interface{}, vals []interface{}) error {

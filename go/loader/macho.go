@@ -8,7 +8,7 @@ import (
 	"github.com/pkg/errors"
 	"io"
 
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 const (

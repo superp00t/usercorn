@@ -9,7 +9,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 type LuaRepl struct {

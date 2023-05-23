@@ -1,7 +1,7 @@
 package mach
 
 import (
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
+	co "github.com/superp00t/usercorn/go/kernel/common"
 	"reflect"
 )
 

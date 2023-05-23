@@ -8,8 +8,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/lunixbochs/usercorn/go/lua"
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/lua"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 type Repl struct {

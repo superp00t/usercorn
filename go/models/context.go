@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 	"strings"
 
-	"github.com/lunixbochs/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/models/cpu"
 )
 
 // like unicorn.ContextSave/Restore, but with memory mappings too

@@ -8,8 +8,8 @@ import (
 	"github.com/lunixbochs/argjoy"
 	"github.com/pkg/errors"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/models"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/models"
 	uc "github.com/unicorn-engine/unicorn/bindings/go/unicorn"
 )
 

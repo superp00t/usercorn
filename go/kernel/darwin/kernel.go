@@ -4,10 +4,10 @@ import (
 	"crypto/rand"
 	"fmt"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/kernel/mach"
-	"github.com/lunixbochs/usercorn/go/kernel/posix"
-	"github.com/lunixbochs/usercorn/go/models"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/kernel/mach"
+	"github.com/superp00t/usercorn/go/kernel/posix"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 const (

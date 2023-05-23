@@ -5,9 +5,9 @@ import (
 	// ks "github.com/keystone-engine/keystone/bindings/go/keystone"
 	uc "github.com/unicorn-engine/unicorn/bindings/go/unicorn"
 
-	// "github.com/lunixbochs/usercorn/go/cpu"
-	"github.com/lunixbochs/usercorn/go/cpu/unicorn"
-	"github.com/lunixbochs/usercorn/go/models"
+	// "github.com/superp00t/usercorn/go/cpu"
+	"github.com/superp00t/usercorn/go/cpu/unicorn"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 var Arch = &models.Arch{

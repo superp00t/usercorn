@@ -5,8 +5,8 @@ import (
 	"syscall"
 	"time"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/native"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/native"
 )
 
 func (k *PosixKernel) Time(out co.Obuf) uint64 {

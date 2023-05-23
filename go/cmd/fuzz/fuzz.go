@@ -11,8 +11,8 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/lunixbochs/usercorn/go/cmd"
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/cmd"
+	"github.com/superp00t/usercorn/go/models"
 
 	uc "github.com/unicorn-engine/unicorn/bindings/go/unicorn"
 )
@@ -131,6 +131,8 @@ func Main(args []string) {
 	c.SetupFlags = func() error {
 		forkAddr = c.Flags.Uint64("forkaddr", 0, "wait until this address to fork and begin fuzzing")
 		fuzzInterp = c.Flags.Bool("fuzzinterp", false, "controls whether fuzzing is delayed until program's main entry point")
+		_ = forkAddr
+		_ = fuzzInterp
 		return nil
 	}
 	c.RunUsercorn = func() error {

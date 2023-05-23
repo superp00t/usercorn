@@ -8,12 +8,12 @@ import (
 	"io"
 	"os"
 
-	"github.com/lunixbochs/usercorn/go/arch"
-	"github.com/lunixbochs/usercorn/go/cmd"
-	"github.com/lunixbochs/usercorn/go/models"
-	"github.com/lunixbochs/usercorn/go/models/debug"
-	"github.com/lunixbochs/usercorn/go/models/trace"
-	"github.com/lunixbochs/usercorn/go/ui"
+	"github.com/superp00t/usercorn/go/arch"
+	"github.com/superp00t/usercorn/go/cmd"
+	"github.com/superp00t/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/models/debug"
+	"github.com/superp00t/usercorn/go/models/trace"
+	"github.com/superp00t/usercorn/go/ui"
 )
 
 func PrintJson(tf *trace.TraceReader) error {

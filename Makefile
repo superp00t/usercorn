@@ -32,52 +32,19 @@ ifeq "$(OS)" "Darwin"
 endif
 
 # figure out if we can download Go
-GOVERSION=1.10.8
-ifeq "$(ARCH)" "x86_64"
-	ifeq "$(OS)" "Darwin"
-		GOURL = "https://storage.googleapis.com/golang/go$(GOVERSION).darwin-amd64.tar.gz"
-	else ifeq "$(OS)" "Linux"
-		GOURL = "https://storage.googleapis.com/golang/go$(GOVERSION).linux-amd64.tar.gz"
-	endif
-endif
-ifeq "$(ARCH)" "i686"
-	ifeq "$(OS)" "Linux"
-		GOURL = "https://storage.googleapis.com/golang/go$(GOVERSION).linux-386.tar.gz"
-	endif
-endif
-ifneq (,$(filter $(ARCH),armv6l armv7l armv8l))
-	ifeq "$(OS)" "Linux"
-		GOURL = "https://storage.googleapis.com/golang/go$(GOVERSION).linux-armv6l.tar.gz"
-	endif
-endif
-
-ifeq ($(GOURL),)
-	GOMSG = "Go 1.6 or later is required. Visit https://golang.org/dl/ to download."
-else
-	GODIR = go-$(ARCH)-$(OS)
-endif
-
-deps/$(GODIR):
-	echo $(GOMSG)
-	[ -n $(GOURL) ] && \
-	mkdir -p deps/build deps/gopath && \
-	cd deps/build && \
-	curl -o go-dist.tar.gz "$(GOURL)" && \
-	cd .. && tar -xf build/go-dist.tar.gz && \
-	mv go $(GODIR)
 
 deps/lib/libunicorn.1.$(LIBEXT):
 	cd deps/build && \
 	git clone https://github.com/unicorn-engine/unicorn.git && git --git-dir unicorn fetch; \
-	cd unicorn && git clean -fdx && git reset --hard origin/master && \
-	make && make PREFIX=$(DEST) install
+	cd unicorn && git clean -fdx && git reset --hard origin/master && cmake -DCMAKE_INSTALL_PREFIX=$(DEST) . && \
+	make && make install
 
 deps/lib/libcapstone.3.$(LIBEXT):
 	cd deps/build && \
 	git clone https://github.com/aquynh/capstone.git && git --git-dir capstone pull; \
 	cd capstone && git clean -fdx && git reset --hard origin/master; \
 	mkdir build && cd build && cmake -DCAPSTONE_BUILD_STATIC=OFF -DCMAKE_INSTALL_PREFIX=$(DEST) -DCMAKE_BUILD_TYPE=RELEASE .. && \
-	make -j2 PREFIX=$(DEST) install
+	make -j2 install
 
 deps/lib/libkeystone.0.$(LIBEXT):
 	cd deps/build && \
@@ -89,44 +56,16 @@ deps/lib/libkeystone.0.$(LIBEXT):
 deps: deps/lib/libunicorn.1.$(LIBEXT) deps/lib/libcapstone.3.$(LIBEXT) deps/lib/libkeystone.0.$(LIBEXT) deps/$(GODIR)
 
 # Go executable targets
-.gopath:
-	mkdir -p .gopath/src/github.com/lunixbochs
-	ln -s ../../../.. .gopath/src/github.com/lunixbochs/usercorn
 
 export CGO_CFLAGS = -I$(DEST)/include
 export CGO_LDFLAGS = -L$(DEST)/lib
 
 GOBUILD := go build
-PATH := '$(DEST)/$(GODIR)/bin:$(PATH)'
 SHELL := env LD_LIBRARY_PATH=$(LD_LIBRARY_PATH):$(DEST)/lib DYLD_LIBRARY_PATH=$(DYLD_LIBRARY_PATH):$(DEST)/lib PATH=$(PATH) /bin/bash
 
-ifneq ($(wildcard $(DEST)/$(GODIR)/.),)
-	export GOROOT := $(DEST)/$(GODIR)
-endif
-ifneq ($(GOPATH),)
-	export GOPATH := $(GOPATH):$(shell pwd)/.gopath
-else
-	export GOPATH := $(DEST)/gopath:$(shell pwd)/.gopath
-endif
-DEPS=$(shell go list -f '{{join .Deps "\n"}}' ./go/... | grep -v usercorn | grep '\.' | sort -u)
-PKGS=$(shell go list ./go/... | sort -u | rev | sed -e 's,og/.*$$,,' | rev | sed -e 's,^,github.com/lunixbochs/usercorn/go,')
-
 # TODO: more DRY?
-usercorn: .gopath
+usercorn:
 	rm -f usercorn
-	$(GOBUILD) -o usercorn ./go/cmd/main
+	$(GOBUILD) -o usercorn github.com/superp00t/usercorn/go/cmd/main
 	$(FIXRPATH) usercorn
 
-get: .gopath
-	go get -u ${DEPS}
-
-test: .gopath
-	go test -v ./go/...
-
-cov: .gopath
-	go get -u github.com/haya14busa/goverage
-	goverage -v -coverprofile=coverage.out ${PKGS}
-	go tool cover -html=coverage.out
-
-bench: .gopath
-	go test -v -benchmem -bench=. ./go/...

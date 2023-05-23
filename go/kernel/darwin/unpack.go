@@ -4,9 +4,9 @@ import (
 	"github.com/lunixbochs/argjoy"
 	"syscall"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/kernel/darwin/unpack"
-	"github.com/lunixbochs/usercorn/go/native/enum"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/kernel/darwin/unpack"
+	"github.com/superp00t/usercorn/go/native/enum"
 )
 
 func Unpack(k co.Kernel, arg interface{}, vals []interface{}) error {

@@ -3,15 +3,15 @@ package arch
 import (
 	"github.com/pkg/errors"
 
-	"github.com/lunixbochs/usercorn/go/arch/arm"
-	"github.com/lunixbochs/usercorn/go/arch/arm64"
-	"github.com/lunixbochs/usercorn/go/arch/m68k"
-	"github.com/lunixbochs/usercorn/go/arch/mips"
-	"github.com/lunixbochs/usercorn/go/arch/sparc"
-	"github.com/lunixbochs/usercorn/go/arch/x86"
-	"github.com/lunixbochs/usercorn/go/arch/x86_16"
-	"github.com/lunixbochs/usercorn/go/arch/x86_64"
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go/arch/arm"
+	"github.com/superp00t/usercorn/go/arch/arm64"
+	"github.com/superp00t/usercorn/go/arch/m68k"
+	"github.com/superp00t/usercorn/go/arch/mips"
+	"github.com/superp00t/usercorn/go/arch/sparc"
+	"github.com/superp00t/usercorn/go/arch/x86"
+	"github.com/superp00t/usercorn/go/arch/x86_16"
+	"github.com/superp00t/usercorn/go/arch/x86_64"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 var archMap = map[string]*models.Arch{

@@ -6,8 +6,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/lunixbochs/usercorn/go/cmd"
-	"github.com/lunixbochs/usercorn/go/models/cpu"
+	"github.com/superp00t/usercorn/go/cmd"
+	"github.com/superp00t/usercorn/go/models/cpu"
 )
 
 func Main(args []string) {

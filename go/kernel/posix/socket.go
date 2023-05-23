@@ -6,8 +6,8 @@ import (
 	"syscall"
 	"unsafe"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/native"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/native"
 )
 
 func (k *PosixKernel) Socket(domain, typ, protocol int) uint64 {

@@ -3,8 +3,8 @@ package linux
 import (
 	"github.com/lunixbochs/struc"
 
-	co "github.com/lunixbochs/usercorn/go/kernel/common"
-	"github.com/lunixbochs/usercorn/go/models"
+	co "github.com/superp00t/usercorn/go/kernel/common"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 type Sysinfo_t struct {

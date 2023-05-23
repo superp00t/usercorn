@@ -2,7 +2,7 @@ usercorn
 ----
 
 [![Build Status](https://travis-ci.org/lunixbochs/usercorn.svg?branch=master)](https://travis-ci.org/lunixbochs/usercorn)
-[![GoDoc](https://godoc.org/github.com/lunixbochs/usercorn?status.svg)](https://godoc.org/github.com/lunixbochs/usercorn)
+[![GoDoc](https://godoc.org/github.com/superp00t/usercorn?status.svg)](https://godoc.org/github.com/superp00t/usercorn)
 [![Slack](https://lunixbochs.herokuapp.com/badge.svg)](https://lunixbochs.herokuapp.com/)
 
 Building

@@ -4,9 +4,9 @@ import (
 	"encoding/binary"
 	"github.com/pkg/errors"
 
-	"github.com/lunixbochs/usercorn/go"
-	"github.com/lunixbochs/usercorn/go/loader"
-	"github.com/lunixbochs/usercorn/go/models"
+	"github.com/superp00t/usercorn/go"
+	"github.com/superp00t/usercorn/go/loader"
+	"github.com/superp00t/usercorn/go/models"
 )
 
 func NewUsercornRawCmd() *UsercornCmd {
