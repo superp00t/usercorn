@@ -1,8 +1,9 @@
 package lua
 
 import (
-	"github.com/lunixbochs/luaish"
 	"strconv"
+
+	lua "github.com/lunixbochs/luaish"
 )
 
 func (L *LuaRepl) printFunc(_ *lua.LState) int {
@@ -46,6 +47,8 @@ func (L *LuaRepl) loadBindings() error {
 	L.SetGlobal("int", toint)
 
 	if err := bindCpu(L); err != nil {
+		return err
+	} else if err := bindCallConv(L); err != nil {
 		return err
 	} else if err := bindUsercorn(L); err != nil {
 		return err
