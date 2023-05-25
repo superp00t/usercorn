@@ -3,10 +3,6 @@ package usercorn
 import (
 	"bufio"
 	"fmt"
-	"github.com/lunixbochs/ghostrace/ghost/memio"
-	"github.com/lunixbochs/readline"
-	"github.com/lunixbochs/struc"
-	"github.com/pkg/errors"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -14,6 +10,11 @@ import (
 	rdebug "runtime/debug"
 	"strings"
 	"sync"
+
+	"github.com/lunixbochs/ghostrace/ghost/memio"
+	"github.com/lunixbochs/readline"
+	"github.com/lunixbochs/struc"
+	"github.com/pkg/errors"
 
 	"github.com/superp00t/usercorn/go/arch"
 	co "github.com/superp00t/usercorn/go/kernel/common"
@@ -814,7 +815,7 @@ func (u *Usercorn) Syscall(num int, name string, getArgs models.SysGetArgs) (uin
 }
 
 func (u *Usercorn) Inscount() uint64 {
-        return u.inscount
+	return u.inscount
 }
 
 func (u *Usercorn) Exit(err error) {

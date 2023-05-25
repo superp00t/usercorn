@@ -2,10 +2,11 @@ package lua
 
 import (
 	"fmt"
-	"github.com/lunixbochs/luaish"
-	"github.com/lunixbochs/luaish-luar"
 	"strconv"
 	"strings"
+
+	lua "github.com/lunixbochs/luaish"
+	luar "github.com/lunixbochs/luaish-luar"
 
 	"github.com/superp00t/usercorn/go/models"
 	"github.com/superp00t/usercorn/go/models/cpu"
@@ -50,8 +51,9 @@ func (b *ubind) Exports() map[string]lua.LGFunction {
 		"reg_read":  b.RegRead,
 		"reg_write": b.RegWrite,
 
-		"start": b.Start,
-		"stop":  b.Stop,
+		"start_call": b.StartCall,
+		"start":      b.Start,
+		"stop":       b.Stop,
 
 		"hook_add":     b.HookAdd,
 		"hook_del":     b.HookDel,
@@ -261,6 +263,27 @@ func (b *ubind) Start(L *lua.LState) int {
 
 func (b *ubind) Stop(L *lua.LState) int {
 	b.checkErr(b.u.Stop())
+	return 0
+}
+
+func (b *ubind) StartCall(L *lua.LState) int {
+	var ptrargs []uint64
+
+	callconv, hasReturn, address, largs := L.CheckInt(1), L.CheckBool(2), L.CheckUint64(3), L.CheckTable(4)
+
+	for i := 1; i <= largs.Len(); i++ {
+		ptrarg := largs.RawGetInt(i).(lua.LInt)
+		ptrargs = append(ptrargs, uint64(ptrarg))
+	}
+
+	returnvalue, err := b.u.StartDirectCall(models.Callconvention(callconv), hasReturn, address, ptrargs)
+	b.checkErr(err)
+
+	if hasReturn {
+		L.Push(lua.LInt(returnvalue))
+		return 1
+	}
+
 	return 0
 }
 

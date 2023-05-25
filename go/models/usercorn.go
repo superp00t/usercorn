@@ -44,6 +44,8 @@ type Usercorn interface {
 	DirectRead(addr, size uint64) ([]byte, error)
 	DirectWrite(addr uint64, p []byte) error
 
+	StartDirectCall(conv Callconvention, hasReturnValue bool, addr uint64, arguments []uint64) (uint64, error)
+
 	RunShellcodeMapped(addr uint64, code []byte, setRegs map[int]uint64, regsClobbered []int) error
 	RunShellcode(addr uint64, code []byte, setRegs map[int]uint64, regsClobbered []int) error
 	RunAsm(addr uint64, asm string, setRegs map[int]uint64, regsClobbered []int) error
