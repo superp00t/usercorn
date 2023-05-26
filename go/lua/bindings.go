@@ -1,6 +1,7 @@
 package lua
 
 import (
+	"fmt"
 	"strconv"
 
 	lua "github.com/lunixbochs/luaish"
@@ -29,6 +30,21 @@ func (L *LuaRepl) intFunc(_ *lua.LState) int {
 	return 0
 }
 
+func (L *LuaRepl) charptrFunc(_ *lua.LState) int {
+	str := L.CheckString(1)
+
+	buffer, err := L.u.Malloc(uint64(len(str)+1), fmt.Sprintf("charptr(%s)", str))
+	if err != nil {
+		panic(err)
+	}
+
+	L.u.MemWrite(buffer, append([]byte(str), 0))
+
+	L.Push(lua.LInt(buffer))
+
+	return 1
+}
+
 func (L *LuaRepl) loadBindings() error {
 	// populate predefined globals as "_builtins" so they can be skipped in help()/dir()
 	builtins := L.NewTable()
@@ -45,6 +61,9 @@ func (L *LuaRepl) loadBindings() error {
 
 	toint := L.NewFunction(L.intFunc)
 	L.SetGlobal("int", toint)
+
+	charptr := L.NewFunction(L.charptrFunc)
+	L.SetGlobal("charptr", charptr)
 
 	if err := bindCpu(L); err != nil {
 		return err
